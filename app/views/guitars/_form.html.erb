@@ -1,0 +1,75 @@
+<div id='guitarnew' style="color: white">
+	<h2>Add guitar details here</h2>
+<%= form_for :guitar, url:{action: 'create'}, :html => {:multipart => true} do |f|%>
+<table>
+	<h3>
+		<tr>
+		<td>
+			<%= f.label :Make%>
+		</td>
+		<td style="color: black;">
+			<%= f.text_field :make, placeholder: "Enter the company name"%>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<%= f.label :Guitar_Model%>	
+		</td>
+		<td style="color: black;">
+			<%= f.text_field :guitar_model, placeholder: "Enter the model no."%>	
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<%= f.label :Colour%>	
+		</td>
+		<td style="color: black;">
+			<%= f.text_field :colour, placeholder: "Enter the colour of the guitar"%>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<%= f.label :Selling_Price%>	
+		</td>
+		<td style="color: black;">
+			<%= f.text_field :selling_price, placeholder: "Enter the selling price of the guitar"%>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<%= f.label :Condition%>
+		</td>
+		<td style="color: black;">
+			<%= f.text_field :condition, placeholder: "Enter the guitar condition"%>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<%= f.label :Rack_No%>
+		</td>
+		<td style="color: black;">
+			<%= f.text_field :rack_no%>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<%= f.label :Quantity%>	
+		</td>
+		<td style="color: black;">
+			<%= f.text_field :quantity%>	
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<%= f.label :Image%>
+		</td>
+		<td style="color: white;">
+			<%= f.file_field :image%>
+		</td>
+	</tr>
+	</h3>
+	
+</table>
+			<p style="color: black"><%= submit_tag "Submit"%> </p>
+	<%end%>
+</div>

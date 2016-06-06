@@ -1,0 +1,75 @@
+<div id ='suppnew' style="color: white;">
+	<%= form_for :supplier, url: {action: "create"} do|f|%>
+	<table>
+		<tr>
+			<td>
+				<%= f.label :Guitar_Name%>		
+			</td>
+			<td style="color: black;">
+				<%= f.text_field :guitar_name, placeholder: "Enter the guitar name"%>
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<%= f.label :Supplier_Name%>
+			</td>
+			<td style="color: black;">
+				<%= f.text_field :supplier_name, placeholder: "Enter the name of supplier"%>
+			</td>
+		</tr>
+		
+		<tr>
+			<td>
+				<%= f.label :Supplier_Address%>		
+			</td>
+			<td style="color: black;">
+				<%= f.text_area :supplier_address, placeholder: "Enter the address of the supplier"%>		
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<%= f.label :Category%>		
+			</td>
+			<td style="color: black;">
+				<%= f.text_field :category, placeholder: "Enter the type of guitar"%>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<%= f.label :Purchased_Date%>
+			</td>
+			<td style="color: black;">
+				<%= f.text_field :purchased_date, placeholder: "dd/mm/yy"%>		
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<%= f.label :Delivery_Date%>
+			</td>
+			<td style="color: black;">
+				<%= f.text_field :delivery_date, placeholder: "dd/mm/yy"%>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<%= f.label :Quantity%>		
+			</td>
+			<td style="color: black;">
+				<%= f.text_field :quantity%>		
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<%=f.label :Price%>
+			</td>
+			<td style="color: black;">
+				<%= f.text_field :price, placeholder: "paid amount"%>
+			</td>
+		</tr>
+		
+	</table>		
+		<p style="color:black;"><%= submit_tag "SetSupplier"%></p>
+	<%end%>
+</div>
+	

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Guitars</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<div id='wrapper'>
+		<header>	
+			<% if user_signed_in?%>
+				<nav class= "navbar navbar-inverse">
+					<ul class= "nav nav-pills">
+						<li id="nav"><%= link_to "Home", guitars_path%></li>
+						<li id="nav"><%= link_to "Add Guitars", new_guitar_path%></li>
+						<li id="nav"><%= link_to "Add Supplier", new_supplier_path%></li>
+						<li id="nav"><%= link_to "List Suppliers", suppliers_path%></li>
+						<li id="search"><%=form_for :search, url:("/search") do |f|%>
+						<%= f.text_field :title%> <%= submit_tag ("Search")%>
+						<%end%></li>
+						<li id="nav"><%= link_to "Sign Out", destroy_user_session_path, method: :delete%></li>
+					</ul>
+				</nav>
+			<%else%>
+				<nav class="navbar navbar-inverse">
+			
+				</nav>
+			<%end%>
+		</header>
+			<%= yield %>
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
+
+	</div>
+</body>
+</html>

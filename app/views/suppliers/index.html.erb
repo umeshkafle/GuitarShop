@@ -1,0 +1,63 @@
+<div id='suppindex' style="color: white;">
+  <h2>Supplier List</h2>
+
+  <% @suppliers.each do |supplier| %>
+<table class="table">
+  <tr>
+    <td>
+      Guitar Name
+    </td>
+    <td><%= supplier.guitar_name %></td>
+  </tr>
+  <tr>
+    <td>
+      Supplier Name
+    </td>
+    <td><%= supplier.supplier_name %></td>
+  </tr>
+  <tr>
+    <td>
+      Supplier Address
+    </td>
+    <td><%= supplier.supplier_address %></td>
+  </tr>
+  <tr>
+    <td>
+      Purchase date
+    </td>
+    <td><%= supplier.purchased_date %></td>
+  </tr>
+  <tr>
+    <td>
+      Delivery Date
+    </td>
+    <td><%= supplier.delivery_date %></td>
+  </tr>
+  <tr>
+    <td>
+      Quantity
+    </td>
+    <td><%= supplier.quantity %></td>
+  </tr>
+  <tr>
+    <td>
+      Price
+    </td>
+    <td><%= supplier.price %></td>
+  </tr>
+  <tr>
+    <td>
+      Category
+    </td>
+    <td><%= supplier.category %></td>
+  </tr>
+    
+      <tr> 
+        <td><%= link_to 'Edit', edit_supplier_path(supplier) %></td>
+        <td><%= button_to 'Destroy', supplier, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+</div>

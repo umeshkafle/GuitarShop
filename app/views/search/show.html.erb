@@ -1,0 +1,5 @@
+<% if @results %>
+	<% @results.each do |guitar| %>
+	<%= link_to "#{guitar.make}", guitar_url(guitar)%>
+	<% end %>
+<% end %>

@@ -1,0 +1,23 @@
+<div id="index-section">
+<h2 style="text-align: center;">Guitar Table</h2>
+	<% @guitars.each do |guitar|%>
+	<div class='caption' style="color: white">
+		<strong>Make:</strong><%= guitar.make%><br>
+		<strong>Model:</strong><%= guitar.guitar_model%><br>
+		<strong>Colour:</strong><%= guitar.colour%><br>
+		<strong>Selling Price ($):</strong><%= guitar.selling_price%><br>
+		<strong>Condition:</strong><%= guitar.condition%><br>
+		<strong>Rack No:</strong><%= guitar.rack_no%><br>
+		<strong>Quantity:</strong><%= guitar.quantity%><br>
+		<a href ="<%= guitar_url(guitar)%>"><%= image_tag guitar.image_url, size: '150x200'%></a><br>
+		<div class='btn btn-default' role='button'>
+			<%= link_to "Delete",guitar_path(guitar.id), method: :delete, data:{confirm: "Are you sure"} %>
+		</div>
+		<div class='btn btn-default' role='button'>
+			<%= link_to "Edit",edit_guitar_path(guitar.id)%>
+		</div>
+	</div>
+	<%end%>
+</div>
+
+

@@ -1,0 +1,41 @@
+<div id='guitarshow'>
+    <h2 style="text-align: center;">Guitar</h2>
+  <div class='showimg'>
+    <%= image_tag @guitar.image_url(:medium)%>
+  </div>
+  <div class='showtxt'>
+    <p>
+    <strong>Make:</strong>
+    <%= @guitar.make %>
+  </p>
+  <p>
+    <strong>Model:</strong>
+    <%= @guitar.guitar_model %>
+  </p>
+  <p>
+    <strong>Colour:</strong>
+    <%= @guitar.colour %>
+  </p>
+  <p>
+    <strong>Rack No:</strong>
+    <%= @guitar.rack_no %>
+  </p>
+  <p>
+    <strong>Selling Price:</strong>
+    <%= @guitar.selling_price %>
+  </p>
+  <p>
+    <strong>Condition:</strong>
+    <%= @guitar.condition %>
+  </p>
+  <p>
+    <strong>Quantity:</strong>
+    <%= @guitar.quantity %>
+  </p>
+  <p>
+  </p>
+  <%= link_to "Delete",guitar_path, method: :delete, data:{confirm: "Are you sure"} %>
+  <%= link_to "Edit", edit_guitar_path%>
+  </div>
+  
+</div>

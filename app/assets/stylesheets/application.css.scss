@@ -1,0 +1,128 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body 
+{
+	background: #390204;
+	height: 100%;
+	margin: 0;
+}
+
+h3,h2
+{
+	color: white;
+}
+
+#wrapper
+{
+	width: 90%;
+	margin: 0 auto;
+	background: url(/assets/slash-guitar-photo-wallpaper-1024x576.png);
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+table {
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+#heading {
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	color: #e6ffe6;
+}
+
+#log_in {
+		margin-left: 200px;
+		padding-right: 500px;
+		padding-left: 200px;
+		padding-top: 50px;
+}
+
+#search, li {
+	margin-top: 10px;
+	margin-left:250px;
+}
+
+#nav, li {
+	margin-right:10px;
+	margin-left: 20px;
+	padding-right:-20px;
+}
+
+#log_in
+{
+	text-align: center;
+	background: #390204;
+	opacity: 0.5;
+	width: 250px;
+	padding: 0px;
+	margin: 0px;
+	float: right;
+	margin-right: 35%;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+
+}
+
+#guitarnew
+{
+	float: right;
+	margin-right: 25%;
+}
+
+#suppnew
+{
+	float: right;
+	margin-right: 30%;
+}
+
+#suppindex
+{
+	float: right;
+	margin-right: 30%;
+}
+
+.index-section
+{
+	display: inline;
+	margin: 10px;
+	padding: 10px;
+	clear: both;
+}
+
+.caption
+{
+	background: black;
+	opacity: 0.6;
+	width: 33%;
+	display: block;
+	float: left;
+	height: 400px;
+	overflow: auto;
+	margin-left: 100px;
+	margin-top: 30px;
+	padding: 10px;
+}
+
+#guitarshow
+{
+
+}
+
+.showimg
+{
+	float: left;
+	margin-left: 550px;
+}
+
+.showtxt
+{
+	float: right;
+	color: white;
+	margin-right: 250px;
+}
